@@ -2,10 +2,11 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import Modal from "react-modal";
 import { useState, useEffect } from "react";
 import AddOneLiner from "../addOneLiner/page";
 import AddDescription from "../addDescription/page";
+import AddProject from "../addProject/page";
+import AddEducation from "../addEducation/page";
 
 const Navbar = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -174,29 +175,8 @@ const Profilepage = () => {
             altText="Add Description"
             displayText={textInputValue}
           />
-
-          <Image
-            src={"/AddProject.svg"}
-            altText="Add Projects"
-            height={313}
-            width={554}
-          />
-
-          <div class="bg-white rounded-lg w-auto mt-10 flex items-center justify-start flex-col pt-5 mr-6">
-            <h2 class="text-lg font-bold mb-2">Add Education</h2>
-            <div class="mx-3 p-6 bg-gray-100 rounded-lg max-w-md">
-              <p class="text-purple-600 text-lg">
-                Please input any skills that you have that are relevant to the
-                field of work you are interested in.
-              </p>
-            </div>
-            <Image
-              src={"/AddCircle.svg"}
-              height={107}
-              width={107}
-              className="mr-auto"
-            />
-          </div>
+          <AddProject />
+          <AddEducation />
         </div>
       </div>
       <footer className="bg-[#2B2148] py-8 px-4 flex flex-col md:flex-row justify-between md:items-center mt-52">

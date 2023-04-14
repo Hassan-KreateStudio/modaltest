@@ -28,8 +28,9 @@ const AddDescription = ({ imageSrc, altText, displayText, onSubmit }) => {
     <div>
       {textInputValue && (
         <div>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row">
             <h2 className="ml-4 mt-5">Description</h2>
+
             <Image
               src={"/Edit.svg"}
               alt={"Edit"}
@@ -48,7 +49,6 @@ const AddDescription = ({ imageSrc, altText, displayText, onSubmit }) => {
       {!textInputValue && (
         <div onClick={handleOpenModal}>
           <img src={imageSrc} alt={altText} height={188} width={551} />
-          {displayText && <p>{displayText}</p>}
         </div>
       )}
       <Modal
