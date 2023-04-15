@@ -51,12 +51,12 @@ const AddProject = () => {
           <div className="flex flex-row ">
             <h2 className="ml-4 mt-5">Projects</h2>
             <div className="flex flex-row ml-auto">
-              {/* <Image
+              <Image
                 src={"/ProjectAdd.svg"}
                 alt="Add pproject"
                 height={54}
                 width={218}
-              /> */}
+              />
               <Image
                 src={"/Edit.svg"}
                 alt={"Edit"}
