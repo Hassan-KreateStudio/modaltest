@@ -6,9 +6,13 @@ import { useState, useEffect } from "react";
 import AddOneLiner from "../addOneLiner/page";
 import AddDescription from "../addDescription/page";
 import AddProject from "../addProject/page";
-import AddEducation from "../addEducation/page";
-import AddOlevel from "../addOlevel/page";
-import EducationModal from "../addOlevel/page";
+import EducationModal from "../educationModal/page";
+import SkillsModal from "../skillsModal/page";
+import GitModal from "../githubModal/page";
+import YoutubeModal from "../youtube/page";
+import BehanceModal from "../behance/page";
+import InstagramModal from "../instagram/page";
+import LinkedinModal from "../linkedin/page";
 
 const Navbar = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -83,7 +87,6 @@ const Profilepage = () => {
       };
     }
   }
-
   const textInputValue = "";
 
   return (
@@ -121,32 +124,35 @@ const Profilepage = () => {
             alt="divider"
             height={2}
             width={399}
-            className="mt-3"
+            className="mt-10"
           />
-          <div className="flex flex-row mt-5  justify-between">
-            <h2 className="mb-2 mr-40">Skills</h2>
-            <Image
+          <div className="mt-3">
+            <h2 className="mb-2 mr-72">Skills</h2>
+            {/* <Image
               src={"/Edit.svg"}
               alt=""
               height={24}
               width={24}
               className="ml-40"
-            />
+            /> */}
           </div>
-          <div>
-            <Image
-              src={"/AddSkills.svg"}
-              width={202}
-              height={53}
-              className="h-auto m"
+          <div className="ml-3">
+            <SkillsModal
+              imageSrc={"/AddSkills.svg"}
+              altText={"Skills"}
+              className="mr-72"
             />
           </div>
           <div className="flex flex-row mt-5  justify-between">
             <h2 className="mb-2 mr-40">Links</h2>
             <Image src={"/Edit.svg"} height={24} width={24} className="ml-40" />
           </div>
-          <div>
-            <Image src={"/Links.svg"} height={68} width={361} />
+          <div className="bg-[#f7f4fa] rounded-lg px-2 py-4 flex items-center space-x-5">
+            <InstagramModal imageSrc={"Instagram.svg"} altText={"Instagram"} />
+            <BehanceModal imageSrc={"Behance.svg"} altText={"Behance"} />
+            <GitModal imageSrc={"Github.svg"} altText={"Github"} />
+            <LinkedinModal imageSrc={"Linkedin.svg"} altText={"Linkedin"} />
+            <YoutubeModal imageSrc={"Youtube.svg"} altText={"Youtube"} />
           </div>
           <div className="mt-10">
             <button className="rounded-full bg-[#6750A4] text-white px-8 py-4 w-72 flex flex-col items-center justify-center outline outline-[#6750A4] text-center">
