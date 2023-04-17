@@ -7,6 +7,8 @@ import AddOneLiner from "../addOneLiner/page";
 import AddDescription from "../addDescription/page";
 import AddProject from "../addProject/page";
 import AddEducation from "../addEducation/page";
+import AddOlevel from "../addOlevel/page";
+import EducationModal from "../addOlevel/page";
 
 const Navbar = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -176,7 +178,15 @@ const Profilepage = () => {
             displayText={textInputValue}
           />
           <AddProject />
-          <AddEducation />
+          <EducationModal
+            imageSrc={"/AddUniversity.svg"}
+            altText={"Add University"}
+          />
+          <EducationModal imageSrc={"/AddAlevel.svg"} altText={"Add Alevel"} />
+          <EducationModal
+            imageSrc={"/AddEducation.svg"}
+            altText={"Add Olevel"}
+          />
         </div>
       </div>
       <footer className="bg-[#2B2148] py-8 px-4 flex flex-col md:flex-row justify-between md:items-center mt-52">
