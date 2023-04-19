@@ -160,11 +160,14 @@ const Profilepage = () => {
                 <span>Share Profile</span>
               </div>
             </button>
-            <button className="rounded-full bg-[#6750A4] text-white px-8 py-4 w-72 flex flex-col items-center justify-center outline outline-[#6750A4] text-center mt-5 pb-3">
-              <div className="flex items-center justify-center space-x-2">
-                <span>Export profile to resume</span>
-              </div>
-            </button>
+            <Link href={"/resumeReady"}>
+              <button className="rounded-full bg-[#6750A4] text-white px-8 py-4 w-72 flex flex-col items-center justify-center outline outline-[#6750A4] text-center mt-5 pb-3">
+                <div className="flex items-center justify-center space-x-2">
+                  <span>Export profile to resume</span>
+                </div>
+              </button>
+            </Link>
+
             <button className="rounded-full bg-[#6750A4] text-white px-8 py-4 w-72 flex flex-col items-center justify-center outline outline-[#6750A4] text-center mt-5 pb-3">
               <div className="flex items-center justify-center space-x-2">
                 <span>LogOut</span>

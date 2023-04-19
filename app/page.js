@@ -1,15 +1,13 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "./page.module.css";
 import Profilepage from "./profilePage/page";
 import React from "react";
-import AddProject from "./addProject/page";
-import Resume from "./resume/page";
+import ResumeLoading from "./resume/loading";
+import ResumeReady from "./resumeReady/page";
 
 const App = () => {
   return (
     <div>
-      <Resume />
+      <Profilepage />
     </div>
   );
 };
